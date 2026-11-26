@@ -1,0 +1,10 @@
+{
+  "file_types": {
+    "Clojure": ["kbd"]
+  },
+  "languages": {
+    "Clojure": {
+      "enable_language_server": false
+    }
+  }
+}
