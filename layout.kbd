@@ -48,11 +48,30 @@
   zmo  C-min     ;; Zoom out
   zmi  C-eql     ;; Zoom in
   lck  M-l       ;; Lock screen (standard Linux Super+L)
+
+  ;; Toggle between QWERTY and BASE (actual layout)
+  ;; This is done with backtick + backspace (see defchordsv2 below)
+  tog (switch
+    ((base-layer qwerty)) (layer-switch base)   break
+    ()                    (layer-switch qwerty) break
+  )
 )
 
 ;; Copilot key (physical LWin + LShift + F23) -> Repeat last key
 (defchordsv2
-  (lmet lsft f23) rpt 25 first-release ()
+  (lmet lsft f23) rpt  25 first-release (qwerty)
+  (grv bspc)      @tog 80 first-release ()
+)
+
+;; ---------------------------------------------------------------------------
+;; LAYER 0: QWERTY Fallback
+;; ---------------------------------------------------------------------------
+(deflayer qwerty
+  _      _      _      _      _      _             _      _      _      _      _      _      _      _
+  _      _      _      _      _      _             _      _      _      _      _      _      _      _
+  _      _      _      _      _      _             _      _      _      _      _      _             _
+  _             _      _      _      _      _      _      _      _      _      _                    _
+  _             _      _                    _                    _
 )
 
 ;; ---------------------------------------------------------------------------
