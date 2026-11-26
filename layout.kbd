@@ -11,11 +11,11 @@
 )
 
 (defsrc
-  grv   1     2     3     4     5           6     7     8     9     0     min   eql   bspc
-  tab   q     w     e     r     t           y     u     i     o     p     lbrc  rbrc  bksl
-  caps  a     s     d     f     g           h     j     k     l     scln  apos        ret
-  lsft        z     x     c     v     b     n     m     comm  .     /                 rsft
-  lctl        lmet  lalt              spc               ralt  ;;copilot, arrow keys
+  grv    1      2      3      4      5             6      7      8      9      0      min    eql    bspc
+  tab    q      w      e      r      t             y      u      i      o      p      lbrc   rbrc   bksl
+  caps   a      s      d      f      g             h      j      k      l      scln   apos          ret
+  lsft          z      x      c      v      b      n      m      comm   .      /                    rsft
+  lctl          lmet   lalt                 spc                  ralt   ;;copilot, arrow keys
 )
 
 (defalias
@@ -59,42 +59,42 @@
 ;; LAYER 1: BASE (Graphite ANSI Angle + Wide + Revised Peripherals)
 ;; ---------------------------------------------------------------------------
 (deflayer base
-  grv  1    2    3    4    5    6    7    8    9    0    rbrc eql  bspc
-  esc  b    l    d    w    z    lbrc apos f    o    u    j    scln bksl
-  tab  n    r    t    s    g    min  y    h    a    e    i    ret
-  @sft x    m    c    v    q    /    k    p    comm .    lmet
-  lalt lctl @sym spc  @nav
+  grv    1      2      3      4      5             6      7      8      9      0      rbrc   eql    bspc
+  esc    b      l      d      w      z             lbrc   apos   f      o      u      j      scln   bksl
+  tab    n      r      t      s      g             min    y      h      a      e      i             ret
+  @sft          x      m      c      v      q      /      k      p      comm   .                    lmet
+  lalt          lctl   @sym                 spc                  @nav
 )
 
 ;; ---------------------------------------------------------------------------
 ;; LAYER 2: HOLD RALT (ESDF Navigation, Editing, Browsing, Left-Thumb Enter)
 ;; ---------------------------------------------------------------------------
 (deflayer ralt-nav
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  esc  pgup home up   end  @url XX   @reo @bck @ptb @ntb @fwd @ctb XX
-  tab  pgdn left down rght @fnd XX   XX   lsft lctl lalt lmet ret
-  lsft @und @cut @cpy @pst XX   XX   @ntw @rld @zmo @zmi lmet
-  _    _    @bth ret  _
+  _      _      _      _      _      _             _      _      _      _      _      _      _      _
+  esc    pgup   home   up     end    @url          XX     @reo   @bck   @ptb   @ntb   @fwd   @ctb   XX
+  tab    pgdn   left   down   rght   @fnd          XX     XX     lsft   lctl   lalt   lmet          ret
+  lsft          @und   @cut   @cpy   @pst   XX     XX     @ntw   @rld   @zmo   @zmi                 lmet
+  _             _      @bth                 ret                  _
 )
 
 ;; ---------------------------------------------------------------------------
 ;; LAYER 3: HOLD LALT (Right-Index Backspace/Delete + Coding & CLI Symbols)
 ;; ---------------------------------------------------------------------------
 (deflayer lalt-sym
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  esc  grv  S-2  S-3  S-4  S-5  XX   @wdl del  S-lbrc S-rbrc S-bksl S-apos XX
-  tab  S-scln S-1 S-comm S-.   S-eql XX @wbs bspc S-9 S-0 S-min ret
-  lsft S-6  S-7  S-grv S-8 S-/  XX   eql  lbrc rbrc bksl lmet
-  _    _    _    spc  @bth
+  _      _      _      _      _      _             _      _      _      _      _      _      _      _
+  esc    grv    S-2    S-3    S-4    S-5           XX     @wdl   del    S-lbrc S-rbrc S-bksl S-apos XX
+  tab    S-scln S-1    S-comm S-.    S-eql         XX     @wbs   bspc   S-9    S-0    S-min         ret
+  lsft          S-6    S-7    S-grv  S-8    S-/    XX     eql    lbrc   rbrc   bksl                 lmet
+  _             _      _                    spc                  @bth
 )
 
 ;; ---------------------------------------------------------------------------
 ;; LAYER 4: HOLD BOTH ALTS (Home-Row Numbers, Aligned F1-F12, Media, Live Reload)
 ;; ---------------------------------------------------------------------------
 (deflayer both-num
-  XX   prev next brdown brup ins @lck menu XX   XX   XX   XX   lrld bspc
-  esc  f1   f2   f3   f4   f5   prtsc f6  f7   f8   f9   f10  f11  f12
-  tab  1    2    3    4    5    min  6    7    8    9    0    ret
-  lsft mute vold volu pp   @cw  /  S-scln S-eql comm .   lmet
-  _    _    _    XX   _
+  XX     prev   next   brdown brup   ins           @lck   menu   XX     XX     XX     XX     lrld   bspc
+  esc    f1     f2     f3     f4     f5            prtsc  f6     f7     f8     f9     f10    f11    f12
+  tab    1      2      3      4      5             min    6      7      8      9      0             ret
+  lsft          mute   vold   volu   pp     @cw    /      S-scln S-eql  comm   .                    lmet
+  _             _      _                    XX                   _
 )
